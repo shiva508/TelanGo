@@ -1,5 +1,6 @@
 import backgroundImage from "@/assets/images/homepageOne.png";
 import { globalStyles } from "@/global/globalStyles";
+import { router } from "expo-router";
 import {
   ImageBackground,
   Pressable,
@@ -8,6 +9,9 @@ import {
   View,
 } from "react-native";
 const HomeScreen = () => {
+  const homeNavigator = () => {
+    router.push("/(home)/home");
+  };
   return (
     <View style={globalStyles.homePageContainer}>
       <ImageBackground
@@ -25,7 +29,7 @@ const HomeScreen = () => {
             styles.buttonContainer,
             pressed && { opacity: 0.85, transform: [{ scale: 0.98 }] },
           ]}
-          onPress={() => console.log("Button Pressed")}
+          onPress={() => homeNavigator()}
         >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Get Started →</Text>
@@ -39,18 +43,6 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  // button: {
-  //   backgroundColor: colors.primary,
-  //   borderRadius: 10,
-  //   alignItems: "center",
-  //   marginBottom: 150,
-  // },
-  // buttonText: {
-  //   color: colors.background,
-  //   fontSize: 16,
-  //   fontWeight: "bold",
-  //   textAlign: "justify",
-  // },
   buttonContainer: {
     alignItems: "center",
     marginBottom: 120,

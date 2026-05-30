@@ -26,7 +26,9 @@ export const globalStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    // backgroundColor: colors.background,
+    //backgroundColor: "#FFF3D6",
+    backgroundColor: "#EED9B7",
     paddingTop: 60,
     paddingHorizontal: 20,
   },
@@ -48,6 +50,11 @@ export const globalStyles = StyleSheet.create({
   },
   header: {
     flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  abd: {
+    flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
   },

@@ -8,3 +8,8 @@ export type Paragraph = {
   para: string;
   base64Image: string;
 };
+
+export type CardProps = {
+  title: string;
+  imagePath: string;
+};
