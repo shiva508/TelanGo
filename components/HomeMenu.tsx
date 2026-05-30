@@ -1,9 +1,13 @@
 import { globalStyles } from "@/global/globalStyles";
 import { LinearGradient } from "expo-linear-gradient";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomCard from "./common/CustomCard";
 
 const HomeMenu = () => {
+  const handlePress = () => {
+    console.log("pressed");
+  };
+
   return (
     <LinearGradient
       colors={["#FFF3D6", "#FEECC9", "#EED9B7"]}
@@ -13,7 +17,7 @@ const HomeMenu = () => {
     >
       <View style={[globalStyles.abd, { marginBottom: 20 }]}>
         <Text style={globalStyles.title}>Welcome to TelanGo!</Text>
-        <View>
+        {/* <View>
           <Pressable
             style={[styles.button, { marginBottom: 20 }]}
             onPress={() => {}}
@@ -28,15 +32,17 @@ const HomeMenu = () => {
           >
             <Text style={{ fontWeight: "bold", fontSize: 18 }}>Culture</Text>
           </Pressable>
-        </View>
+        </View> */}
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <CustomCard
             title={"History"}
             imagePath="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            onPress={handlePress}
           ></CustomCard>
           <CustomCard
             title={"Culture"}
             imagePath="https://images.unsplash.com/photo-1773332611574-d73d8f5cea36?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            onPress={handlePress}
           ></CustomCard>
         </ScrollView>
       </View>

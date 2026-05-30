@@ -1,12 +1,8 @@
-import {
-  ImageBackground,
-  Pressable,
-  StyleSheet
-} from "react-native";
+import { ImageBackground, Pressable, StyleSheet } from "react-native";
 import backImag from "../../assets/images/card/culture_600x600.png";
-const CustomCard = ({ title, imagePath }) => {
+const CustomCard = ({ title, imagePath, onPress }) => {
   return (
-    <Pressable style={styles.container}>
+    <Pressable style={[styles.container]} onPress={onPress}>
       <ImageBackground
         source={backImag}
         style={{
